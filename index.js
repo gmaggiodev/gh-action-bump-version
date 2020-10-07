@@ -12,6 +12,8 @@ Toolkit.run(async tools => {
   const pkg = tools.getPackageJSON()
   const event = tools.context.payload
 
+  console.log(event);
+
   if (!event.commits) {
     console.log('Couldn\'t find any commits in this event, incrementing patch version...')
   }
